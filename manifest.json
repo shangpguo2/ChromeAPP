@@ -1,25 +1,25 @@
 {
-    "name": "CityU Login Extension",
-    "version": "1.0.0",
-    "description": "Login CityU's website with your android phone",
+    "name": "My Extension",
+    "version": "1.0",
     "manifest_version": 3,
-    "author": "GUO Shangping",
-    "action":{
-        "default_popup": "popup.html",
-        "default_title": "CityU Login"
-        
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "bluetooth",
+      "activeTab",
+      "tabs",
+      "management",
+      "https://auth.cityu.edu.hk/"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "My Extension"
     },
     "content_scripts": [
         {
-            "matches": [ "*://auth.cityu.edu.hk/*" ],
-            "js": [ "js/popup.js"]
+          "matches": ["https://auth.cityu.edu.hk/*"],
+          "js": ["content.js"]
         }
-    ],
-    "permissions" : [
-        "tabs",
-        "storage"
-    ],
-    "background": [
-        "background.js"
     ]
-}
+  }

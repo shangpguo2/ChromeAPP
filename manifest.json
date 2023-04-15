@@ -1,5 +1,5 @@
 {
-    "name": "My Extension",
+    "name": "CityU Login",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
@@ -14,7 +14,13 @@
     ],
     "action": {
       "default_popup": "popup.html",
-      "default_title": "My Extension"
+      "default_title": "CityU Login"
+    },
+    "icons": {
+      "16": "CityU_icon.png",
+      "32": "CityU_icon.png",
+      "48": "CityU_icon.png",
+      "128": "CityU_icon.png"
     },
     "content_scripts": [
         {
